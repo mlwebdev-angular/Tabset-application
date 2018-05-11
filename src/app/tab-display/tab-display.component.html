@@ -1,71 +1,69 @@
 <h2>BLDG-25 Coding Challenge</h2>
-<demo-tabset [basePath]="['tabset']" 
-  title="Angular / Redux Tabbed component">
+<demo-tabset [basePath]="['tabset']" title="Angular / Redux Tabbed component">
   <demo-tab title="What is Redux?">
-    <h3>What is Redux?</h3> 
-      Redux is a predictable state mangement library for JavaScript. It helps you 
-      manage the state of your application and is something that you should use 
-      in medium to large single page applications with complex data flows. 
-    <ul><span id="principles">3 major principles.</span>
+    <h3>What is Redux?</h3>
+    Redux is a predictable state mangement library for JavaScript. It helps you manage the state of your application and is something
+    that you should use in medium to large single page applications with complex data flows.
+    <ul>
+      <span id="principles">3 major principles.</span>
       <p>
         <li>Single Soure of Truth</li>
-        This makes it easy to create universal apps, as the state from your server can be 
-        serialized and hydrated into the client with no extra coding effort. 
-        A single state tree also makes it easier to debug or inspect an application; 
-        it also enables you to persist your app's state in development, 
-        for a faster development cycle. Some functionality which has been traditionally difficult
-        to implement - Undo/Redo, for example - can suddenly become trivial to implement, 
+        This makes it easy to create universal apps, as the state from your server can be serialized and hydrated into the client
+        with no extra coding effort. A single state tree also makes it easier to debug or inspect an application; it also
+        enables you to persist your app's state in development, for a faster development cycle. Some functionality which
+        has been traditionally difficult to implement - Undo/Redo, for example - can suddenly become trivial to implement,
         if all of your state is stored in a single tree.
       </p>
       <p>
         <li>State us Read Only</li>
-        This ensures that neither the views nor the network callbacks will ever write directly 
-        to the state. Instead, they express an intent to transform the state. Because all changes 
-        are centralized and happen one by one in a strict order, there are no 
-        subtle race conditions to watch out for. As actions are just plain objects, they can be 
-        logged, serialized, stored, and later replayed for debugging or testing purposes.
+        This ensures that neither the views nor the network callbacks will ever write directly to the state. Instead, they express
+        an intent to transform the state. Because all changes are centralized and happen one by one in a strict order, there
+        are no subtle race conditions to watch out for. As actions are just plain objects, they can be logged, serialized,
+        stored, and later replayed for debugging or testing purposes.
       </p>
       <p>
         <li>Changes are made with Pure Functions</li>
-        Reducers are just pure functions that take the previous state and an action, and return 
-        the next state. Remember to return new state objects, instead of mutating the 
-        previous state. You can start with a single reducer, and as your app grows, split
-        it off into smaller reducers that manage specific parts of the state tree. 
-        Because reducers are just functions, you can control the order in which they are called, 
-        pass additional data, or even make reusable reducers for common tasks such as pagination.
+        Reducers are just pure functions that take the previous state and an action, and return the next state. Remember to return
+        new state objects, instead of mutating the previous state. You can start with a single reducer, and as your app grows,
+        split it off into smaller reducers that manage specific parts of the state tree. Because reducers are just functions,
+        you can control the order in which they are called, pass additional data, or even make reusable reducers for common
+        tasks such as pagination.
       </p>
-    </ul> 
+    </ul>
   </demo-tab>
   <demo-tab title="Why Redux?">
     <h3>Why is Redux?</h3>
-    Without the Redux architecture you know that each Angular component maintains the state 
-    and the logic behind the view. This model aligns perfectly with the 
-    encapsulation principle of object-oriented programming. 
-    However, it can be a problem when you have multiple views 
-    that are working with the same piece of data and do not have a
-    parent-child relationship in this situation.
-    We often have multiple copies of the same data that are independent of each other 
-    so whenever you update the model. Because the views are independent, they need to be in sync 
-    and what is important is that they do not have a parent-child relationship.
-    A navigation bar is not a parent or child of other views. If we were passing simple data, 
-    we could be simple it will simply use the input properties of the child components to 
-    pass the data down the subtree. Since these views are independent, if you want to keep them 
-    in sync we have to do some extra work.
-    A common solution is to use events and sooner or later that will turn to an event spaghetti.
-    In a large code base, we would have events published all over the place and we would then need 
-    to track what happens to the application state. We would have to jump all over the code to see what's going on.
-    The problem with this approach is that data can be updated in an unpredictable way.
-    When there is a bug we have to jump all over the code to figure out how the data
-    is flowing and how the application state is updated in multiple places. So it's unpredictable.
-    Also note that adding a new feature becomes a challenge because once again we don't know 
-    what is the impact of this new feature on the application space if it's touching
-    the same piece of data that is in different places. That needs to be kept in sync, so again
-    we would have to do a lot of hard work.
-    Many functionalities that have been traditionally difficult to implement can suddenly 
-    become trivial to implement, if all of your state is stored in a single tree.
-    Redux solve these problems and many other issues with testability and debugging.
+    Without the Redux architecture you know that each Angular component maintains the state and the logic behind the view. This
+    model aligns perfectly with the encapsulation principle of object-oriented programming. However, it can be a problem
+    when you have multiple views that are working with the same piece of data and do not have a parent-child relationship
+    in this situation. We often have multiple copies of the same data that are independent of each other so whenever you
+    update the model. Because the views are independent, they need to be in sync and what is important is that they do not
+    have a parent-child relationship. A navigation bar is not a parent or child of other views. If we were passing simple
+    data, we could be simple it will simply use the input properties of the child components to pass the data down the subtree.
+    Since these views are independent, if you want to keep them in sync we have to do some extra work. A common solution
+    is to use events and sooner or later that will turn to an event spaghetti. In a large code base, we would have events
+    published all over the place and we would then need to track what happens to the application state. We would have to
+    jump all over the code to see what's going on. The problem with this approach is that data can be updated in an unpredictable
+    way. When there is a bug we have to jump all over the code to figure out how the data is flowing and how the application
+    state is updated in multiple places. So it's unpredictable. Also note that adding a new feature becomes a challenge because
+    once again we don't know what is the impact of this new feature on the application space if it's touching the same piece
+    of data that is in different places. That needs to be kept in sync, so again we would have to do a lot of hard work.
+    Many functionalities that have been traditionally difficult to implement can suddenly become trivial to implement, if
+    all of your state is stored in a single tree. Redux solve these problems and many other issues with testability and debugging.
   </demo-tab>
   <demo-tab title="ngRedux Project">
-    This is tab 3.
+    <h4> A TabSet Component Demo with Angular, Redux, and @angular-redux/store.</h4>
+
+    <p></p>>Clone Repo: git clone https://github.com/mlwebdev-angular/Tabset-application folder-name</p>
+    To run:
+    <br> cd tabset-demo
+    <br> npm i
+    <br> ng serve ("-o to open in browser") or npm start
+
+    <p> Open your browser at http://localhost:4200</p>
+
+    <h4>Live version</h4>
+    http://tabset-ngredux.surge.sh
+
   </demo-tab>
 </demo-tabset>
