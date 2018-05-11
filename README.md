@@ -15,4 +15,3 @@ ng serve ("-o to open in browser") or npm start
 
 Open your browser at http://localhost:4200
 
-View live version at http://tabset-ngredux.surge.sh
