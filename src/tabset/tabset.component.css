@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button-bar button.active {
+  background: rgb(63, 230, 152);
+  border-bottom: none;
+  font-weight: 600;
+}
+
+.button-bar button {
+  flex-grow: 1;
+  border: solid silver 1px;
+  background: #EEE;
+  padding: 0.25rem;
+}
+
+.button-bar button:focus {
+  outline: 0;
+}
+
+.button-bar {
+  width: 100;
+  display: flex;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-grow: 2;
+  padding: 0.25rem;
+  border-bottom: solid silver 1px;
+}
+
+.content {
+  background: white;
+  padding: 1rem;
+  border-left: solid silver 1px;
+  border-right: solid silver 1px;
+  border-bottom: solid silver 1px;
+}

@@ -1,0 +1,12 @@
+<div class="button-bar">
+  <h5 class="title">{{ title }}</h5>
+  <button
+    *ngFor="let tab of tabs"
+    [ngClass]="{ active: isActive(tab, activeTabId$ | async) }"
+    (click)="activateTab(tab.tabId)">
+    {{ tab.title }}
+  </button>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>

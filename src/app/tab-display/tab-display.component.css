@@ -1,0 +1,13 @@
+tabset {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#principles {
+  font-size: 17px;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+li {
+  font-weight: 600;
+}
